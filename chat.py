@@ -18,7 +18,7 @@ def client(port):
 def server(port):
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     hostname = '127.0.0.1'
-    s.bind((hostname, port))
+    s.bind((s.getsockname()[0], port))
     print('Listening at {}'.format(s.getsockname()))
     while True:
         data, clientAddress = s.recvfrom(MAX_SIZE_BYTES)

@@ -16,4 +16,4 @@ while True:
     upperCaseMessage = message.upper()
     print('The client at {} says {!r}'.format(clientAddress, message))
     data = upperCaseMessage.encode('ascii')
-    s.sendto(data, clientAddress)    
+    s.sendto(data, clientAddress)
